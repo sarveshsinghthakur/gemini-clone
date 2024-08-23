@@ -19,6 +19,7 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
+    path('/admin', admin.site.urls),
     path('', views.chat, name='chat'),
     path('clear-conversation/', views.clear_conversation, name='clear_conversation'),
 
