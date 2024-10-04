@@ -94,9 +94,6 @@ Pygments==2.17.2
 pyOpenSSL==24.2.1
 pyparsing==3.1.2
 PyPDF2==3.0.1
-pypiwin32==223
-python-dateutil==2.9.0.post0
-pyttsx3==2.98
 pytz==2024.2
 pywin32==306; platform_system == "Windows"
 pyzmq==25.1.2
@@ -137,5 +134,5 @@ wheel==0.44.0
 whitenoise==6.7.0
 yt-dlp==2024.8.6
 zope.interface==7.0.1
-Pillow
 gunicorn
+
