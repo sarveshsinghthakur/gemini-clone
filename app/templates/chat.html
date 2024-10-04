@@ -14,8 +14,6 @@
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: center;
-            align-items: center;
             height: 100vh;
         }
 
@@ -29,6 +27,7 @@
             overflow-y: auto;
             display: flex;
             flex-direction: column;
+            margin: 20px 10px; /* Adjust margins for mobile */
         }
 
         .message {
@@ -57,7 +56,6 @@
             display: flex;
             background-color: white;
             padding: 10px;
-           
             border-top: 1px solid #ccc;
             width: 100%;
         }
@@ -83,12 +81,11 @@
         .sidebar {
             background-color: #343a40;
             color: white;
-            height: 100vh;
+            height: 100%;
             padding: 20px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 250px;
+            position: relative; /* Changed to relative for mobile layout */
+            width: 250px; /* Fixed width */
+            display: none; /* Initially hide sidebar on mobile */
         }
 
         .sidebar h2 {
@@ -115,8 +112,19 @@
         }
 
         .container-fluid {
-            margin-left: 250px; /* Align chat window beside the sidebar */
+            flex: 1;
             padding: 20px;
+            display: flex; /* Changed to flex */
+            flex-direction: column; /* Stack sidebar and chat window */
+        }
+
+        @media (min-width: 768px) {
+            .sidebar {
+                display: block; /* Show sidebar on larger screens */
+            }
+            .container-fluid {
+                margin-left: 250px; /* Align chat window beside the sidebar */
+            }
         }
     </style>
 </head>
